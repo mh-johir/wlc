@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome Josim</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #00ffc3;
+      margin-top: 60px;
+      animation: zoomIn 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 20px;
+      line-height: 1.6;
+      animation: slideUp 2s ease;
+    }
+
+    .sparkle {
+      font-size: 2em;
+      color: gold;
+      animation: sparkle 1s infinite alternate;
+      margin-top: 20px;
+    }
+
+    .creator {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    @keyframes zoomIn {
+      from {transform: scale(0.5); opacity: 0;}
+      to {transform: scale(1); opacity: 1;}
+    }
+
+    @keyframes slideUp {
+      from {transform: translateY(50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes sparkle {
+      0% { color: #ffcc00; transform: scale(1);}
+      100% { color: #ff66cc; transform: scale(1.3);}
+    }
+
+    /* ❤️ Falling Hearts */
+    .heart {
+      position: absolute;
+      color: red;
+      font-size: 20px;
+      animation: fall linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>@Josim Xhmed 💫</h1>
+  <div class="sparkle">✨✨✨</div>
+  <p>
+    Wlc to our <strong>Furfuri Nagar City</strong>... ✨<br>
+    Follow our group rules and be friendly with everyone.<br>
+    Enjoy your group journey with us...<br>
+    <strong>Thanks for join 💫🫶</strong>
+  </p>
+
+  <div class="creator">Created by JOHIR 💻</div>
+
+  <!-- ❤️ Generate multiple hearts -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 2 + Math.random() * 3 + "s";
+      heart.innerText = "❤️";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
